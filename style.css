@@ -1,4 +1,3 @@
-
 /* =====================================
    1. DESIGN TOKENS
 ===================================== */
@@ -6,9 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root {
-
     /* Colour palette - 60/30/10 */
-
     --primary: #172B4D;
     --text: #243247;
     --text-muted: #64748B;
@@ -18,7 +15,6 @@
     --accent: #2563EB;
 
     /* Supporting colour shades */
-
     --primary-hover: #243E63;
     --accent-light: #EFF6FF;
 
@@ -32,7 +28,6 @@
     --danger-border: #F5D1D1;
 
     /* Spacing tokens */
-
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 1rem;
@@ -40,10 +35,8 @@
     --space-5: 2rem;
 
     /* Other design tokens */
-
     --radius: 8px;
     --radius-small: 5px;
-
     --sidebar-width: 250px;
 
     --shadow: 0 1px 4px rgba(23, 43, 77, 0.08);
@@ -68,7 +61,6 @@ body {
     margin: 0;
     background: var(--bg);
     color: var(--text);
-
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 1.5;
@@ -81,12 +73,9 @@ body {
 body > header {
     margin-left: var(--sidebar-width);
     min-height: 20px;
-
     padding: var(--space-2) var(--space-3);
-
     background: var(--surface);
     border-bottom: 1px solid var(--border);
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,7 +84,6 @@ body > header {
 
 body > header h1 {
     margin: 0;
-
     color: var(--primary);
     font-size: 21px;
     font-weight: 700;
@@ -107,21 +95,15 @@ body > header p {
 }
 
 /* Logout button */
-
 body > header nav a {
     display: inline-block;
-
     padding: 9px 18px;
-
     color: var(--danger);
     background: var(--danger-light);
-
     border: 1px solid var(--danger-border);
     border-radius: var(--radius-small);
-
     text-decoration: none;
     font-weight: 600;
-
     transition: var(--transition);
 }
 
@@ -129,7 +111,6 @@ body > header nav a:hover {
     background: var(--danger);
     color: var(--surface);
     border-color: var(--danger);
-
     transform: translateY(-2px);
 }
 
@@ -139,33 +120,25 @@ body > header nav a:hover {
 
 body > aside {
     position: fixed;
-
     top: 0;
     left: 0;
     bottom: 0;
-
     width: var(--sidebar-width);
-
     padding: var(--space-5) var(--space-3);
-
     background: var(--primary);
     color: var(--surface);
-
     overflow-y: auto;
 }
 
 aside h2 {
     margin: 0 0 var(--space-5);
-
     padding: var(--space-2);
-
     color: var(--surface);
     font-size: 20px;
 }
 
 aside ul {
     list-style: none;
-
     padding: 0;
     margin: 0;
 }
@@ -176,32 +149,24 @@ aside li {
 
 aside a {
     display: block;
-
     padding: var(--space-3);
-
     color: var(--surface);
     text-decoration: none;
-
     border-radius: var(--radius-small);
-
     transition: var(--transition);
 }
 
 aside a:hover {
     background: var(--primary-hover);
-
     padding-left: 22px;
     color: var(--surface);
 }
 
 /* Active dashboard link */
-
 aside a[aria-current="page"] {
     background: var(--primary-hover);
     color: var(--surface);
-
     border-radius: var(--radius-small);
-
     font-weight: 700;
     padding-left: calc(var(--space-3) - 3px);
 }
@@ -212,15 +177,12 @@ aside a[aria-current="page"] {
 
 main {
     margin-left: var(--sidebar-width);
-
     padding: var(--space-5);
-
     min-height: 75vh;
 }
 
 main h2 {
     margin: 0 0 var(--space-2);
-
     color: var(--primary);
     font-size: 21px;
 }
@@ -236,9 +198,7 @@ main > section > p {
 
 main > section:first-child > section {
     display: grid;
-
     grid-template-columns: repeat(4, minmax(0, 1fr));
-
     gap: var(--space-3);
     margin-bottom: var(--space-5);
 }
@@ -246,32 +206,23 @@ main > section:first-child > section {
 main article {
     position: relative;
     overflow: hidden;
-
     padding: var(--space-4);
-
     background: var(--surface);
-
     border: 1px solid var(--border);
     border-top: 3px solid transparent;
-
     border-radius: var(--radius);
-
     box-shadow: var(--shadow);
-
     transition: var(--transition);
 }
 
 main article:hover {
     transform: translateY(-6px);
-
     border-top-color: var(--accent);
-
     box-shadow: var(--shadow-hover);
 }
 
 main article h3 {
     margin: 0 0 var(--space-3);
-
     color: var(--text-muted);
     font-size: 13px;
     font-weight: 600;
@@ -279,12 +230,9 @@ main article h3 {
 
 main article p:first-of-type {
     margin: 0 0 var(--space-2);
-
     color: var(--primary);
-
     font-size: 25px;
     font-weight: 700;
-
     transition: var(--transition);
 }
 
@@ -294,9 +242,7 @@ main article:hover p:first-of-type {
 
 main article p:last-of-type {
     margin: 0;
-
     color: var(--accent);
-
     font-size: 12px;
     font-weight: 600;
 }
@@ -308,14 +254,10 @@ main article p:last-of-type {
 #orders {
     margin-bottom: var(--space-5);
     padding: var(--space-4);
-
     background: var(--surface);
-
     border: 1px solid var(--border);
     border-radius: var(--radius);
-
     box-shadow: var(--shadow);
-
     overflow-x: auto;
 }
 
@@ -325,16 +267,13 @@ main article p:last-of-type {
 
 table {
     width: 100%;
-
     border-collapse: collapse;
     text-align: left;
-
     white-space: nowrap;
 }
 
 caption {
     padding-bottom: var(--space-3);
-
     color: var(--text-muted);
     text-align: left;
 }
@@ -345,20 +284,15 @@ thead {
 
 th {
     padding: var(--space-3);
-
     color: var(--text-muted);
-
     font-size: 12px;
     font-weight: 700;
-
     text-transform: uppercase;
 }
 
 td {
     padding: var(--space-3);
-
     color: var(--text);
-
     border-bottom: 1px solid var(--border);
 }
 
@@ -381,7 +315,6 @@ td:nth-child(6) {
 }
 
 /* Order status colours */
-
 td:last-child {
     font-weight: 600;
 }
@@ -414,15 +347,11 @@ main > section[id="products"],
 main > section[id="customers"],
 main > section[id="revenue"],
 main > section[id="settings"] {
-
     margin-bottom: var(--space-3);
     padding: var(--space-4);
-
     background: var(--surface);
-
     border: 1px solid var(--border);
     border-radius: var(--radius);
-
     box-shadow: var(--shadow);
 }
 
@@ -430,7 +359,6 @@ main > section[id="products"] p,
 main > section[id="customers"] p,
 main > section[id="revenue"] p,
 main > section[id="settings"] p {
-
     margin: 0;
     color: var(--text-muted);
 }
@@ -441,13 +369,9 @@ main > section[id="settings"] p {
 
 body > footer {
     margin-left: var(--sidebar-width);
-
     padding: var(--space-4);
-
     background: var(--surface);
-
     border-top: 1px solid var(--border);
-
     color: var(--text-muted);
     text-align: center;
 }
@@ -472,31 +396,25 @@ button:focus-visible {
 ===================================== */
 
 @media (max-width: 1000px) {
-
     main > section:first-child > section {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 }
 
 @media (max-width: 650px) {
-
     :root {
         --sidebar-width: 0px;
     }
 
     body > aside {
         position: static;
-
         width: 100%;
-
         padding: var(--space-3);
     }
 
     aside ul {
         display: flex;
         flex-wrap: wrap;
-
         gap: var(--space-2);
     }
 
@@ -510,9 +428,7 @@ button:focus-visible {
 
     body > header {
         margin-left: 0;
-
         flex-wrap: wrap;
-
         padding: var(--space-3);
     }
 
@@ -522,7 +438,6 @@ button:focus-visible {
 
     main {
         margin-left: 0;
-
         padding: var(--space-3);
     }
 
@@ -533,5 +448,198 @@ button:focus-visible {
     body > footer {
         margin-left: 0;
     }
+}
 
+/* =====================================
+   12. LOGIN PAGE
+   These rules apply only to login.html.
+   Dashboard styling above remains unchanged.
+===================================== */
+
+body.login-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+}
+
+/* Login header */
+body.login-page > header {
+    margin-left: 0;
+    min-height: auto;
+    padding: var(--space-4) var(--space-5);
+    display: block;
+    text-align: center;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+}
+
+body.login-page > header h1 {
+    color: var(--primary);
+    font-size: 24px;
+    letter-spacing: -0.5px;
+}
+
+body.login-page > header p {
+    margin-top: var(--space-1);
+    color: var(--text-muted);
+}
+
+/* Login content area */
+body.login-page > main {
+    width: 100%;
+    max-width: 460px;
+    min-height: 0;
+    margin: auto;
+    padding: var(--space-5) var(--space-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Login card */
+body.login-page main article {
+    width: 100%;
+    padding: 36px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--accent);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: box-shadow var(--transition);
+}
+
+body.login-page main article:hover {
+    transform: none;
+    border-top-color: var(--accent);
+    box-shadow: var(--shadow-hover);
+}
+
+body.login-page main article h2 {
+    margin: 0 0 var(--space-2);
+    color: var(--primary);
+    font-size: 25px;
+    text-align: center;
+}
+
+body.login-page main article > p {
+    margin: 0 0 var(--space-4);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* Login form fields */
+body.login-page form > div {
+    margin-bottom: var(--space-3);
+}
+
+body.login-page label {
+    display: block;
+    margin-bottom: var(--space-2);
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+body.login-page input {
+    display: block;
+    width: 100%;
+    min-height: 46px;
+    padding: 11px 13px;
+    color: var(--text);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-small);
+    font: inherit;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+body.login-page input::placeholder {
+    color: var(--text-muted);
+    opacity: 0.8;
+}
+
+body.login-page input:hover {
+    border-color: var(--text-muted);
+}
+
+body.login-page input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+/* Invalid input state */
+body.login-page input:user-invalid {
+    border-color: var(--danger);
+    background: var(--danger-light);
+}
+
+body.login-page input:user-invalid:focus {
+    box-shadow: 0 0 0 3px var(--danger-border);
+}
+
+/* Login button */
+body.login-page form button {
+    width: 100%;
+    min-height: 46px;
+    margin-top: var(--space-2);
+    padding: 11px var(--space-3);
+    color: var(--surface);
+    background: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-small);
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+
+body.login-page form button:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-hover);
+}
+
+body.login-page form button:active {
+    transform: translateY(0);
+}
+
+body.login-page form button:focus-visible {
+    outline: 3px solid var(--accent-light);
+    outline-offset: 3px;
+}
+
+/* Login footer */
+body.login-page > footer {
+    margin-left: 0;
+    padding: var(--space-3);
+    background: transparent;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    text-align: center;
+}
+
+body.login-page > footer p {
+    margin: 0;
+}
+
+/* Login page small-screen adjustments */
+@media (max-width: 500px) {
+    body.login-page > header {
+        padding: var(--space-3);
+    }
+
+    body.login-page > header h1 {
+        font-size: 21px;
+    }
+
+    body.login-page > main {
+        padding: var(--space-4) var(--space-3);
+    }
+
+    body.login-page main article {
+        padding: var(--space-4);
+    }
 }
