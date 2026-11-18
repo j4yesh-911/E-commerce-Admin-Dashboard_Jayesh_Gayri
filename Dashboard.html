@@ -16,7 +16,10 @@
 <body class="dashboard-page">
     <div class="dashboard-layout">
 
-        <aside class="sidebar">
+        <!-- CHANGE 1: tiny anchor used to close the mobile drawer (CSS only, no JavaScript) -->
+        <span id="closed" class="drawer-closed"></span>
+
+        <aside class="sidebar" id="sidebar">
             <div class="sidebar-brand">
                 <span class="brand-mark">S</span>
                 <div>
@@ -51,8 +54,14 @@
             </div>
         </aside>
 
+        <!-- CHANGE 2: dark backdrop; tapping it closes the drawer -->
+        <a href="#closed" class="sidebar-overlay" aria-label="Close menu"></a>
+
         <div class="dashboard-content">
             <header class="topbar">
+                <!-- CHANGE 3: hamburger button (visible on mobile and tablet only) -->
+                <a class="menu-button" href="#sidebar" aria-label="Open menu">☰</a>
+
                 <div class="topbar-title">
                     <p class="breadcrumb">Workspace <span>/</span> Dashboard</p>
                     <h1>Admin Dashboard</h1>
@@ -589,5 +598,6 @@
             </footer>
         </div>
     </div>
+
 </body>
 </html>
